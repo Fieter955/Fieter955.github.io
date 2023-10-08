@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Fibonacci & Volume Calculator</title>
+</head>
+<body>
+
+    <nav id="nav">
+        <h1>Haloo<span> Fieter</span></h1>
+        
+        <ul id="ul">
+            <li><a href="https://elearning.undiksha.ac.id/login/index.php">E-Learning</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="icon">
+            <input type="checkbox" name="" >
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+    </nav>
+    <div class="container">
+
+        <div class="card">  
+            
+                
+                <h1>Fibonacci Calculator</h1>
+                <p>Enter a number to calculate the Fibonacci sequence:</p>
+                <form>
+                    <div class="container2">
+                        <input type="number" id="fibInput" class="input">
+                    </div>
+                        <button onclick="calculateFibonacci()" type="button">Calculate</button>
+                        <p>Result:</p>
+                        <p id="fibResult"></p>
+                </form>
+                
+            </div>
+
+            <div class="card">
+                <h1>Volume Calculator</h1>
+                <p>Enter the dimensions of the object:</p>
+                <form >
+                    <div class="container2">
+                        <input type="number" id="length" placeholder="Length">
+                    </div>
+                    <div class="container2">
+                        <input type="number" id="width" placeholder="Width">
+                    </div>
+                    <div class="container2">
+                        <input type="number" id="height" placeholder="Height">
+                    </div>
+                        <button onclick="calculateVolume()" type="button">Calculate</button>
+                        <p id="volumeResult">Volume:</p>
+                </form>
+                
+            
+            </div>
+    </div>
+
+    <footer>
+        <div>
+            <p>&copy; 2023 Kontak Kami</p>
+        </div>
+    </footer>
+    
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+
+</html>
