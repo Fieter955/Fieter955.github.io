@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+      footer{
+        margin-top : 37%;
+      }
+    </style>
   <meta charset="utf-8" />
 
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
@@ -10,12 +15,13 @@
     name="viewport"
   />
 
-  <title>How to become a frontend developer | Atom Template</title>
+  <title>Fieter Brain Pasaribu</title>
 
   <meta property="og:title" content="How to become a frontend developer | Atom Template" />
 
   <meta property="og:locale" content="en_US" />
 
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
   <link
     rel="canonical"
     href="//post"
@@ -117,7 +123,11 @@
   <div class="container flex items-center justify-between">
     <div>
       <a href="/">
-        <img src="/assets/img/logo.svg" class="w-24 lg:w-48" alt="logo image" />
+        <h1
+          class="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl"
+        >
+          Hello
+        </h1>
       </a>
     </div>
     <div class="hidden lg:block">
@@ -337,39 +347,61 @@
   </div>
 </div>
 
-
-
-
-      <div class="bg-primary">
-  <div class="container flex flex-col justify-between py-6 sm:flex-row">
-    <p class="text-center font-body text-white md:text-left">
-      © Copyright 2022. All right reserved, ATOM.
-    </p>
-    <div class="flex items-center justify-center pt-5 sm:justify-start sm:pt-0">
-      <a href="/">
-        <i
-          class="bx bxl-facebook-square text-2xl text-white hover:text-yellow"
-        ></i>
-      </a>
-      <a href="/" class="pl-4">
-        <i class="bx bxl-twitter text-2xl text-white hover:text-yellow"></i>
-      </a>
-      <a href="/" class="pl-4">
-        <i class="bx bxl-dribbble text-2xl text-white hover:text-yellow"></i>
-      </a>
-      <a href="/" class="pl-4">
-        <i class="bx bxl-linkedin text-2xl text-white hover:text-yellow"></i>
-      </a>
-      <a href="/" class="pl-4">
-        <i class="bx bxl-instagram text-2xl text-white hover:text-yellow"></i>
-      </a>
-    </div>
+<main class="flex-1 p-8" id="app">
+  <div class="max-w-lg mx-auto bg-white p-6 rounded shadow-lg">
+      <h1 class="text-2xl font-semibold mb-4">Statistik Calculator</h1>
+      <div class="mb-4">
+          <label for="data" class="block text-sm font-medium text-gray-600">Masukkan Data (pisahkan dengan
+              koma)</label>
+          <input v-model="data" id="data" type="text"
+              class="mt-1 p-2 w-full border rounded focus:outline-none focus:ring focus:border-blue-500">
+      </div>
+      <button @click="hitung"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          Hitung
+      </button>
+      <div v-if="hasil.length > 0" class="mt-4">
+          <h2 class="text-lg font-semibold mb-2">Hasil</h2>
+          <p>Mean: {{ mean }}</p>
+          <p>Median: {{ median }}</p>
+          <p>Modus: {{ modus }}</p>
+      </div>
   </div>
-</div>
+</main>
+
+<footer>
+          <div class="bg-primary">
+      <div class="container flex flex-col justify-between py-6 sm:flex-row">
+        <p class="text-center font-body text-white md:text-left">
+          © Copyright 2022. All right reserved, Fieter.
+        </p>
+        <div class="flex items-center justify-center pt-5 sm:justify-start sm:pt-0">
+          <a href="/">
+            <i
+              class="bx bxl-facebook-square text-2xl text-white hover:text-yellow"
+            ></i>
+          </a>
+          <a href="/" class="pl-4">
+            <i class="bx bxl-twitter text-2xl text-white hover:text-yellow"></i>
+          </a>
+          <a href="/" class="pl-4">
+            <i class="bx bxl-dribbble text-2xl text-white hover:text-yellow"></i>
+          </a>
+          <a href="/" class="pl-4">
+            <i class="bx bxl-linkedin text-2xl text-white hover:text-yellow"></i>
+          </a>
+          <a href="/" class="pl-4">
+            <i class="bx bxl-instagram text-2xl text-white hover:text-yellow"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+</footer>
 
     </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-    <script src="/assets/js/main.js"></script>
+    <!-- <script src="/assets/js/main.js"></script> -->
     <script>
         const app = Vue.createApp({
             data() {
